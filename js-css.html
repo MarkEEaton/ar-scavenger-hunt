@@ -1,0 +1,17 @@
+<style>
+#arjsDebugUIContainer { display: none; }
+</style>
+
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+
+<script>
+AFRAME.registerComponent('markerhandler', {
+  init: function () {
+    this.el.sceneEl.addEventListener('markerFound', () => {
+      // redirect to custom URL
+      window.location = 'https://github.com/AR-js-org/AR.js';
+    });
+  }
+});
+</script>
