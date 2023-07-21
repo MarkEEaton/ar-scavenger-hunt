@@ -1,3 +1,4 @@
+<!-- to be included in the "Group Custom JS/CSS" section -->
 <style>
 #arjsDebugUIContainer { display: none; }
 </style>
@@ -11,9 +12,7 @@ AFRAME.registerComponent('markerhandler', {
     this.markers = { reference: false, circulation: false }
     console.log(this.reference)
     this.el.sceneEl.addEventListener('markerFound', () => {
-      // redirect to custom URL
       this.markers.reference = true;
-      alert(this.markers.reference);
     });
   },
 });
