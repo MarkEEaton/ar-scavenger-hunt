@@ -21,10 +21,18 @@
 <script>
 AFRAME.registerComponent('markerhandler', {
   init: function () {
-    this.markers = { reference: false, circulation: false }
+    this.markers = { reference: false, circulation: false, photocopier: false }
     document.querySelector("#anchorzero").addEventListener('markerFound', () => {
       this.markers.reference = true;
-      document.querySelector('#goalzero').innerHTML = "Reference Desk ✅︎";
+      document.querySelector('#goalzero').innerHTML = "Reference Desk ✔";
+    });
+    document.querySelector("#anchorone").addEventListener('markerFound', () => {
+      this.markers.reference = true;
+      document.querySelector('#goalone').innerHTML = "Circulation Desk ✔";
+    });
+    document.querySelector("#anchortwo").addEventListener('markerFound', () => {
+      this.markers.reference = true;
+      document.querySelector('#goaltwo').innerHTML = "Photocopier/Scanner ✔";
     });
   },
 });
