@@ -6,13 +6,16 @@
 <style>
 #arjsDebugUIContainer { display: none; }
 #header-container { width: 100%; }
-#header { width: 100vw; height: 50px; background-color: #ccc; margin: 0 auto; text-align: left; padding: 5px; }
+#header { width: 100vw; margin: 0 auto; text-align: left; padding: 5px; }
 @media screen and (orientation: landscape) {
   #header {
     display: none;
   }
 }
-.dropdown { float: left; }
+.dropdown { float: left; z-index: 50; }
+.dropdown-menu li { font-size: 2em; padding: 2px 20px; }
+.dropdown-menu li { white-space: nowrap; }
+#fsize { font-size: 2em; }
 </style>
 
 <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
