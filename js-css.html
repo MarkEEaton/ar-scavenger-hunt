@@ -28,15 +28,23 @@ AFRAME.registerComponent('markerhandler', {
     document.querySelector("#anchorzero").addEventListener('markerFound', () => {
       this.markers.reference = true;
       document.querySelector('#goalzero').innerHTML = "Reference Desk ✔";
+      this.check(this.markers);
     });
     document.querySelector("#anchorone").addEventListener('markerFound', () => {
-      this.markers.reference = true;
+      this.markers.circulation = true;
       document.querySelector('#goalone').innerHTML = "Circulation Desk ✔";
+      this.check(this.markers);
     });
     document.querySelector("#anchortwo").addEventListener('markerFound', () => {
-      this.markers.reference = true;
+      this.markers.photocopier = true;
       document.querySelector('#goaltwo').innerHTML = "Photocopier/Scanner ✔";
+      this.check(this.markers);
     });
+  },
+  check: function (markers) {
+    if (Object.values(markers).every(Boolean) === true) {
+      alert("all true")
+    }
   },
 });
 </script>
