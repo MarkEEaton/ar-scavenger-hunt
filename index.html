@@ -1,6 +1,18 @@
 <body style="margin: 0; overflow: hidden">
   <div id="header-container">
-    <div id="header">Welcome to the Scavenger Hunt!</div>
+    <div id="header">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <div>Welcome to the Scavenger Hunt!</div>
+    </div>
   </div>
   <a-scene embedded arjs device-orientation-permission-ui="enabled: false">
     <a-marker preset="hiro" look-at="[camera]">
