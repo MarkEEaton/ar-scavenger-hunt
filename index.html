@@ -14,8 +14,8 @@
       <div>Welcome to the Scavenger Hunt!</div>
     </div>
   </div>
-  <a-scene embedded arjs device-orientation-permission-ui="enabled: false">
-    <a-marker preset="hiro" look-at="[camera]">
+  <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" device-orientation-permission-ui="enabled: false">
+    <a-marker type="barcode" value="0" look-at="[camera]">
       <a-entity rotation="-90 0 0">
           <a-box markerhandler position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
         <a-text value="You found the reference desk!" position="0 1.6 0" align="center"></a-text>
