@@ -22,9 +22,9 @@
 AFRAME.registerComponent('markerhandler', {
   init: function () {
     this.markers = { reference: false, circulation: false }
-    this.el.sceneEl.addEventListener('markerFound', () => {
+    document.querySelector("#anchorzero").addEventListener('markerFound', () => {
       this.markers.reference = true;
-      document.querySelector('#goalone').innerHTML = "Reference Desk ✅︎";
+      document.querySelector('#goalzero').innerHTML = "Reference Desk ✅︎";
     });
   },
 });
