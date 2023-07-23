@@ -1,3 +1,4 @@
+<!-- Group homepage -->
 <body style="margin: 0; overflow: hidden;">
   <div id="header-container">
     <div id="header">
@@ -15,19 +16,13 @@
   </div>
   <a-scene embedded markerhandler arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" device-orientation-permission-ui="enabled: false">
     <a-marker type="barcode" value="0" look-at="[camera]" id="anchorzero">
-      <a-entity rotation="-90 0 0">
-          <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
-      </a-entity>
+      <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
     <a-marker type="barcode" value="1" look-at="[camera]" id="anchorone">
-      <a-entity rotation="-90 0 0">
-          <a-icosahedron position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
-      </a-entity>
+      <a-icosahedron position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
     <a-marker type="barcode" value="2" look-at="[camera]" id="anchortwo">
-      <a-entity rotation="-90 0 0">
-          <a-cylinder position="0 0.5 0" material="color: green;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
-      </a-entity>
+      <a-cylinder position="0 0.5 0" material="color: green;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
