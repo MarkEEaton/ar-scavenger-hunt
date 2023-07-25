@@ -12,7 +12,9 @@ body { margin-left: 0 !important }
 }
 .startend  { margin: auto; padding: 5px; display: flex; flex-direction: column; }
 #starter { background-color: #ccc; border-radius: 5px; padding: 30px; font-size: 3em; text-align: center; }
-#startbutton { font-size: 2em; }
+@media screen and (orientation: portrait) {
+  #starter { font-size: 3em; }
+}
 #ender { display: none; }
 #header-container { width: 100%; }
 #header { width: 100vw; margin: 0 auto; text-align: left; padding: 5px; }
