@@ -7,7 +7,10 @@
 #arjsDebugUIContainer { display: none; }
 body { margin-left: 0 !important }
 #startend-container { max-height: 90vh; max-width: 90vw; padding: 15px; }
-.startend  { min-width: 80vw; min-height: 80vh; margin: 0 auto; padding: 5px; display: flex; flex-direction: column; }
+@media screen and (orientation: landscape) {
+  #startend-container { margin: auto; }
+}
+.startend  { min-height: 80vh; margin: auto; padding: 5px; display: flex; flex-direction: column; }
 #starter { background-color: #ccc; border-radius: 5px; }
 #ender { display: none; }
 #header-container { width: 100%; }
