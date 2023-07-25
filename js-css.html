@@ -30,6 +30,17 @@ body { margin-left: 0 !important }
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
 <script>
+function getStarted() {
+  document.getElementById("startend-container").style.display = "none";
+}
+
+window.onload = function () {
+  let startlistener = document.getElementById("startbutton");
+  startlistener.addEventListener("click", getStarted);
+}
+</script>
+
+<script>
 AFRAME.registerComponent('markerhandler', {
   init: function () {
     this.markers = { reference: false, circulation: false, photocopier: false }
