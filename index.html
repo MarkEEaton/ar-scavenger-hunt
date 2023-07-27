@@ -2,7 +2,7 @@
 <!-- Group homepage -->
 <body style="overflow: hidden; width: 100vw;">
 
-<a-scene style="max-height: 100vh; max-width: 100vw; border: 3px solid red" embedded markerhandler arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" device-orientation-permission-ui="enabled: false">
+<a-scene style="max-height: 100vh; max-width: 100vw;" embedded markerhandler arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" device-orientation-permission-ui="enabled: false">
 
   <div id="header-container" style="position: fixed;">
     <div id="header">
@@ -17,15 +17,17 @@
         </ul>
       </div>
     </div>
-    <div id="starter" class="startend">
-      <p>Welcome to the Library's <strong>Scavenger Hunt</strong>!</span></p>
-      <p>Find the items listed under "Check your progress"</p>
-      <p>Tap on the shapes when you find the items!</p>
-      <button type="button" class="btn btn-success btn-lg" id="startbutton">Start!</button>
-    </div>
-    <div id="ender" class="startend">
-      <p><strong>🎉 Congratulations! 🎉</strong> You've found all of the items!</p>
-      <p>Show this screen to the librarians at the reference desk to claim your prize!</p>
+    <div id="startend-container">
+      <div id="starter" class="startend">
+        <p>Welcome to the Library's <strong>Scavenger Hunt</strong>!</span></p>
+        <p>Find the items listed under "Check your progress"</p>
+        <p>Tap on the shapes when you find the items!</p>
+        <button type="button" class="btn btn-success btn-lg" id="startbutton">Start!</button>
+      </div>
+      <div id="ender" class="startend">
+        <p><strong>🎉 Congratulations! 🎉</strong> You've found all of the items!</p>
+        <p>Show this screen to the librarians at the reference desk to claim your prize!</p>
+      </div>
     </div>
   </div>
 

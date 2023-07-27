@@ -12,12 +12,12 @@ body { display: flex; justify-content: center; align-items: center; }
 }
 #ender { display: none; background-color: #ccc; border-radius: 5px; padding: 30px; font-size: 2em; text-align: center; position: relative; }
 
-#header-container { z-index: 45; width: 100vw; padding: 20px; }
+#header-container { z-index: 45; width: 100%; padding: 20px; }
 #header { padding: 5px; }
 @media screen and (orientation: landscape) {
-  #header-container { max-height: 100vh; max-width: 100vw; }
-  #header { text-align: left; margin: auto auto; }
-  body { margin-top: 0 !important; }
+  #header-container { max-height: 100vh; width: 100vw; margin-top: 5px; }
+  #header { text-align: center; }
+  #startend-container { width: 100%; display: flex; justify-content: center; }
 }
 .dropdown { z-index: 50; }
 .dropdown-menu li { font-size: 2em; padding: 2px 20px; white-space: nowrap; }
