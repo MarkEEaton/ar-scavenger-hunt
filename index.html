@@ -1,17 +1,10 @@
 <meta name="viewport">
 <!-- Group homepage -->
-<body style="margin: 0; overflow: hidden;">
-  <div id="startend-container">
-    <div id="starter" class="startend">
-      <p>Welcome to the Library's <strong>Scavenger Hunt</strong>!</span></p>
-      <p>Find the items listed under "Check your progress"</p>
-      <p>Tap on the shapes when you find the items!</p>
-      <button type="button" class="btn btn-success btn-lg" id="startbutton">Start!</button>
-    </div>
-    <div id="ender" class="startend>
-    </div>
-  </div>
-  <div id="header-container">
+<body style="overflow: hidden; width: 100vw;">
+
+<a-scene style="max-height: 100vh; max-width: 100vw; border: 3px solid red" embedded markerhandler arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" device-orientation-permission-ui="enabled: false">
+
+  <div id="header-container" style="position: fixed;">
     <div id="header">
       <div class="dropdown">
         <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,10 +17,19 @@
         </ul>
       </div>
     </div>
+    <div id="starter" class="startend">
+      <p>Welcome to the Library's <strong>Scavenger Hunt</strong>!</span></p>
+      <p>Find the items listed under "Check your progress"</p>
+      <p>Tap on the shapes when you find the items!</p>
+      <button type="button" class="btn btn-success btn-lg" id="startbutton">Start!</button>
+    </div>
+    <div id="ender" class="startend">
+      <p><strong>🎉 Congratulations! 🎉</strong> You've found all of the items!</p>
+      <p>Show this screen to the librarians at the reference desk to claim your prize!</p>
+    </div>
   </div>
-  <div id="scene-container">
-  <div id="scene">
-  <a-scene embedded markerhandler arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" device-orientation-permission-ui="enabled: false">
+
+  <a-entity camera>
     <a-marker type="barcode" value="0" look-at="[camera]" id="anchorzero">
       <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
@@ -37,8 +39,6 @@
     <a-marker type="barcode" value="2" look-at="[camera]" id="anchortwo">
       <a-cylinder position="0 0.5 0" material="color: green;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
-  </div>
-  </div>
+  </a-entity>
+</a-scene>
 </body>
