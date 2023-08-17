@@ -24,8 +24,8 @@ body { display: flex; justify-content: center; align-items: center; }
 .fsize { font-size: 2em; }
 </style>
 
-<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<script type="text/javascript" src="https://b7jl.pythonanywhere.com/static/aframe-ar.js"></script>
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
 <script>
 function getStarted() {
@@ -41,25 +41,50 @@ window.onload = function () {
 <script>
 AFRAME.registerComponent('markerhandler', {
   init: function () {
-    this.markers = { reference: false, circulation: false, photocopier: false }
+    this.markers = { reference: false, computers: false, childrens: false, studyrooms: false, leisure: false, photocopier: false, elevator: false, circulation: false }
     document.querySelector("#anchorzero").addEventListener('markerFound', () => {
       this.markers.reference = true;
       document.querySelector('#goalzero').innerHTML = "Reference Desk ✔";
       this.check(this.markers);
     });
     document.querySelector("#anchorone").addEventListener('markerFound', () => {
-      this.markers.circulation = true;
-      document.querySelector('#goalone').innerHTML = "Circulation Desk ✔";
+      this.markers.computers = true;
+      document.querySelector('#goalone').innerHTML = "Computers/Printer ✔";
       this.check(this.markers);
     });
     document.querySelector("#anchortwo").addEventListener('markerFound', () => {
+      this.markers.childrens = true;
+      document.querySelector('#goaltwo').innerHTML = "Children's Books ✔";
+      this.check(this.markers);
+    });
+    document.querySelector("#anchorthree").addEventListener('markerFound', () => {
+      this.markers.studyrooms = true;
+      document.querySelector('#goalthree').innerHTML = "Study Rooms ✔";
+      this.check(this.markers);
+    });
+    document.querySelector("#anchorfour").addEventListener('markerFound', () => {
+      this.markers.leisure = true;
+      document.querySelector('#goalfour').innerHTML = "Leisure Collection ✔";
+      this.check(this.markers);
+    });
+    document.querySelector("#anchorfive").addEventListener('markerFound', () => {
       this.markers.photocopier = true;
-      document.querySelector('#goaltwo').innerHTML = "Photocopier/Scanner ✔";
+      document.querySelector('#goalfive').innerHTML = "Photocopier/Scanner ✔";
+      this.check(this.markers);
+    });
+    document.querySelector("#anchorsix").addEventListener('markerFound', () => {
+      this.markers.elevator = true;
+      document.querySelector('#goalsix').innerHTML = "Elevator to the stacks ✔";
+      this.check(this.markers);
+    });
+    document.querySelector("#anchorseven").addEventListener('markerFound', () => {
+      this.markers.circulation = true;
+      document.querySelector('#goalseven').innerHTML = "Circulation Desk ✔";
       this.check(this.markers);
     });
   },
   check: function (markers) {
-     if (Object.is(JSON.stringify(markers), JSON.stringify({ reference: true, circulation: true, photocopier: true })) == true) {
+     if (Object.is(JSON.stringify(markers), JSON.stringify({ reference: true, computers: true, childrens: true, studyrooms: true, leisure: true, photocopier: true, elevator: true, circulation: true })) == true) {
        document.getElementById("ender").style.display = "block";
        document.getElementsByClassName("dropdown-menu")[0].classList.remove("show");
     }

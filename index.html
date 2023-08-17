@@ -1,5 +1,5 @@
-<!-- Group homepage -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no," />
+<!-- Group homepage -->
 <body style="overflow: hidden; width: 100vw;">
 
 <a-scene style="max-height: 100vh; max-width: 100vw;" embedded markerhandler arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" device-orientation-permission-ui="enabled: false">
@@ -12,8 +12,13 @@
         </button>
         <ul class="dropdown-menu">
           <li id="goalzero">Reference Desk ❌</li>
-          <li id="goalone">Circulation Desk ❌</li>
-          <li id="goaltwo">Photocopier/Scanner ❌</li>
+          <li id="goalone">Computers/Printer ❌</li>
+          <li id="goaltwo">Children's Books ❌</li>
+          <li id="goalthree">Study Rooms ❌</li>
+          <li id="goalfour">Leisure Collection ❌<li>
+          <li id="goalfive">Photocopier/Scanner ❌</li>
+          <li id="goalsix">Elevator to the stacks ❌</li>
+          <li id="goalseven">Circulation Desk ❌</li>
         </ul>
       </div>
     </div>
@@ -36,10 +41,25 @@
       <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
     <a-marker type="barcode" value="1" look-at="[camera]" id="anchorone">
-      <a-icosahedron position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
+      <a-icosahedron position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-icosahedron>
     </a-marker>
     <a-marker type="barcode" value="2" look-at="[camera]" id="anchortwo">
-      <a-cylinder position="0 0.5 0" material="color: green;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
+      <a-cylinder position="0 0.5 0" material="color: green;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-cylinder>
+    </a-marker>
+    <a-marker type="barcode" value="3" look-at="[camera]" id="anchorthree">
+      <a-sphere position="0 0.5 0" material="color: orange;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-sphere>
+    </a-marker>
+    <a-marker type="barcode" value="4" look-at="[camera]" id="anchorfour">
+      <a-box position="0 0.5 0" material="color: yellow;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-triangle>
+    </a-marker>
+    <a-marker type="barcode" value="5" look-at="[camera]" id="anchorfive">
+      <a-icosahedron position="0 0.5 0" material="color: purple;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-ring>
+    </a-marker>
+    <a-marker type="barcode" value="6" look-at="[camera]" id="anchorsix">
+      <a-tetrahedron position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-tetrahedron>
+    </a-marker>
+    <a-marker type="barcode" value="7" look-at="[camera]" id="anchorseven">
+      <a-cylinder position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
   </a-entity>
 </a-scene>
