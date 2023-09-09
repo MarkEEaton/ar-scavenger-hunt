@@ -41,7 +41,7 @@ window.onload = function () {
 <script>
 AFRAME.registerComponent('markerhandler', {
   init: function () {
-    this.markers = { reference: false, computers: false, childrens: false, studyrooms: false, leisure: false, photocopier: false, elevator: false, circulation: false }
+    this.markers = { reference: false, computers: false, referencebooks: false, studyrooms: false, leisure: false, photocopier: false, elevator: false, circulation: false }
     document.querySelector("#anchorzero").addEventListener('markerFound', () => {
       this.markers.reference = true;
       document.querySelector('#goalzero').innerHTML = "Reference Desk ✔";
@@ -53,8 +53,8 @@ AFRAME.registerComponent('markerhandler', {
       this.check(this.markers);
     });
     document.querySelector("#anchortwo").addEventListener('markerFound', () => {
-      this.markers.childrens = true;
-      document.querySelector('#goaltwo').innerHTML = "Children's Books ✔";
+      this.markers.referencebooks = true;
+      document.querySelector('#goaltwo').innerHTML = "Reference Books ✔";
       this.check(this.markers);
     });
     document.querySelector("#anchorthree").addEventListener('markerFound', () => {
@@ -84,7 +84,7 @@ AFRAME.registerComponent('markerhandler', {
     });
   },
   check: function (markers) {
-     if (Object.is(JSON.stringify(markers), JSON.stringify({ reference: true, computers: true, childrens: true, studyrooms: true, leisure: true, photocopier: true, elevator: true, circulation: true })) == true) {
+     if (Object.is(JSON.stringify(markers), JSON.stringify({ reference: true, computers: true, referencebooks: true, studyrooms: true, leisure: true, photocopier: true, elevator: true, circulation: true })) == true) {
        document.getElementById("ender").style.display = "block";
        document.getElementsByClassName("dropdown-menu")[0].classList.remove("show");
     }
