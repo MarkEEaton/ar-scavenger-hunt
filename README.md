@@ -9,3 +9,5 @@ There are limitations here. Some files that you'd might want to upload to custom
 ### Some details
 
 In our experience, the AR game works on >90% of phones. It does not work on a small percentage of phones is because AR.js does not always identify the camera correctly (sometimes it picks the wrong camera when there are multiple outward-facing options). This problem has not been solved by the AR.js developers, so my odds of solving it are very low. At our library, we have worked around this issue by having students whose phones don't work either partner with other students or use a library-provided tablet. This has been a successful workaround, and has allowed us to proceed with the game as an orientation activity.
+
+#### This project was built in with the invaluable collaboration of Prof. Carrie Jedlicka.
