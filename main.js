@@ -1,33 +1,3 @@
-<!-- to be included in the "Group Custom JS/CSS" section -->
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-<style>
-#arjsDebugUIContainer { display: none; }
-body { display: flex; justify-content: center; align-items: center; }
-#starter { background-color: #ccc; border-radius: 5px; padding: 30px; font-size: 2em; text-align: center; }
-@media screen and (orientation: portrait) {
-  #starter { font-size: 2.2em; }
-}
-#startbutton { font-size: 1.5em }
-#ender { display: none; background-color: #ccc; border-radius: 5px; padding: 30px; font-size: 2em; text-align: center; position: relative; }
-
-#header-container { z-index: 45; width: 100%; padding: 20px; }
-#header { padding: 5px; text-align: center; }
-@media screen and (orientation: landscape) {
-  #header-container { max-height: 100vh; width: 100vw; margin-top: 5px; }
-  #startend-container { width: 100%; display: flex; justify-content: center; }
-}
-.dropdown { z-index: 50; }
-.dropdown-menu li { font-size: 2em; padding: 2px 20px; white-space: nowrap; }
-.fsize { font-size: 2em; }
-</style>
-
-<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-
-<script>
 function getStarted() {
   document.getElementById("starter").style.display = "none";
 }
@@ -35,10 +5,8 @@ function getStarted() {
 window.onload = function () {
   let startlistener = document.getElementById("startbutton");
   startlistener.addEventListener("click", getStarted);
-  }
-</script>
+}
 
-<script>
 AFRAME.registerComponent('markerhandler', {
   init: function () {
     this.markers = { reference: false, computers: false, referencebooks: false, studyrooms: false, leisure: false, photocopier: false, elevator: false, circulation: false }
@@ -90,4 +58,3 @@ AFRAME.registerComponent('markerhandler', {
     }
   },
 });
-</script>
