@@ -7,7 +7,8 @@
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-  <link rel="stylesheet" type="text/css" href={{ url_for("static", filename="main.css") }} />
+  <link rel="stylesheet" type="text/css" href="/static/main.css") }} />
+  <script src="/static/main.js"></script>
 
 </head>
 <body style="overflow: hidden; width: 100vw;">
@@ -47,28 +48,28 @@
   </div>
 
   <a-entity camera>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-desk.patt") }} look-at="[camera]" id="anchorzero">
+    <a-marker type="pattern" url="/static/pattern-desk.patt") }} look-at="[camera]" id="anchorzero">
       <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-print.patt") }} look-at="[camera]" id="anchorone">
+    <a-marker type="pattern" url="/static/pattern-print.patt") }} look-at="[camera]" id="anchorone">
       <a-icosahedron position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-icosahedron>
     </a-marker>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-ref.patt") }} look-at="[camera]" id="anchortwo">
+    <a-marker type="pattern" url="/static/pattern-ref.patt") }} look-at="[camera]" id="anchortwo">
       <a-cylinder position="0 0.5 0" material="color: green;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-cylinder>
     </a-marker>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-study.patt") }} look-at="[camera]" id="anchorthree">
+    <a-marker type="pattern" url="/static/pattern-study.patt") }} look-at="[camera]" id="anchorthree">
       <a-sphere position="0 0.5 0" material="color: orange;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-sphere>
     </a-marker>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-leis.patt") }} look-at="[camera]" id="anchorfour">
+    <a-marker type="pattern" url="/static/pattern-leis.patt") }} look-at="[camera]" id="anchorfour">
       <a-box position="0 0.5 0" material="color: yellow;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-triangle>
     </a-marker>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-phot.patt") }} look-at="[camera]" id="anchorfive">
+    <a-marker type="pattern" url="/static/pattern-phot.patt") }} look-at="[camera]" id="anchorfive">
       <a-icosahedron position="0 0.5 0" material="color: purple;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-ring>
     </a-marker>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-elev.patt") }} look-at="[camera]" id="anchorsix">
+    <a-marker type="pattern" url="/static/pattern-elev.patt") }} look-at="[camera]" id="anchorsix">
       <a-tetrahedron position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-tetrahedron>
     </a-marker>
-    <a-marker type="pattern" url={{ url_for("static", filename="pattern-circ.patt") }} look-at="[camera]" id="anchorseven">
+    <a-marker type="pattern" url="/static/pattern-circ.patt") }} look-at="[camera]" id="anchorseven">
       <a-cylinder position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
     </a-marker>
   </a-entity>
