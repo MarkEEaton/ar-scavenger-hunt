@@ -11,6 +11,7 @@ AFRAME.registerComponent('markerhandler', {
   init: function () {
     this.markers = { reference: false }
     document.querySelector("#anchorzero").addEventListener('markerFound', () => {
+      console.log("found!")
       this.markers.reference = true;
       document.querySelector('#goalzero').innerHTML = "Reference Desk ✔";
       this.check(this.markers);

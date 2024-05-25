@@ -4,14 +4,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
 		<script src="main.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc:./targets.mind;" vr-mode-ui="enabled:false" device-orientation-permission-ui="enabled:false">
+    <a-scene markerhandler mindar-image="imageTargetSrc:./targets.mind;" vr-mode-ui="enabled:false" device-orientation-permission-ui="enabled:false">
       <div id="header-container" style="position: fixed;">
         <div id="header">
           <div class="dropdown">
@@ -38,7 +37,7 @@
       </div>
 
       <a-camera position="0 0 0" look-controls="enabled:false"></a-camera>
-      <a-entity mindar-image-target="targetIndex:0">
+      <a-entity mindar-image-target="targetIndex:0" id="anchorzero">
         <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
       </a-entity>
     </a-scene>
