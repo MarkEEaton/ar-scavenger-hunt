@@ -1,79 +1,16 @@
 <html lang=en>
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/dist/mindar-image.prod.js"></script>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/dist/mindar-image-aframe.prod.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="/static/main.css">
-  <script src="/static/main.js"></script>
-
-</head>
-<body style="overflow: hidden; width: 100vw;">
-
-<a-scene style="max-height: 100vh; max-width: 100vw;" embedded markerhandler arjs="detectionMode: mono" device-orientation-permission-ui="enabled: false">
-
-  <div id="header-container" style="position: fixed;">
-    <div id="header">
-      <div class="dropdown">
-        <button class="btn btn-success dropdown-toggle mx-auto" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="fsize">Check your progress</span>
-        </button>
-        <ul class="dropdown-menu">
-          <li id="goalzero">Reference Desk ❌</li>
-          <li id="goalone">Computers/Printer ❌</li>
-          <li id="goaltwo">Reference Books ❌</li>
-          <li id="goalthree">Study Rooms ❌</li>
-          <li id="goalfour">Leisure Collection ❌<li>
-          <li id="goalfive">Photocopier/Scanner ❌</li>
-          <li id="goalsix">Elevator to the stacks ❌</li>
-          <li id="goalseven">Circulation Desk ❌</li>
-        </ul>
-      </div>
-    </div>
-    <div id="startend-container">
-      <div id="starter" class="startend">
-        <p>Welcome to the Library's <strong>Scavenger Hunt</strong>!</span></p>
-        <p>Find the items listed under "Check your progress"</p>
-        <p>Finding the shapes will check them off your list!</p>
-        <button type="button" class="btn btn-success btn-lg" id="startbutton">Start!</button>
-      </div>
-      <div id="ender" class="startend">
-        <p><strong>🎉 Congratulations! 🎉</strong> You've found all of the items!</p>
-        <p>Show this screen to the librarians at the reference desk to claim your prize!</p>
-      </div>
-    </div>
-  </div>
-
-  <a-entity camera>
-    <a-marker type="pattern" url="/static/pattern-desk.patt") }} look-at="[camera]" id="anchorzero">
-      <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
-    </a-marker>
-    <a-marker type="pattern" url="/static/pattern-print.patt") }} look-at="[camera]" id="anchorone">
-      <a-icosahedron position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-icosahedron>
-    </a-marker>
-    <a-marker type="pattern" url="/static/pattern-ref.patt") }} look-at="[camera]" id="anchortwo">
-      <a-cylinder position="0 0.5 0" material="color: green;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-cylinder>
-    </a-marker>
-    <a-marker type="pattern" url="/static/pattern-study.patt") }} look-at="[camera]" id="anchorthree">
-      <a-sphere position="0 0.5 0" material="color: orange;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-sphere>
-    </a-marker>
-    <a-marker type="pattern" url="/static/pattern-leis.patt") }} look-at="[camera]" id="anchorfour">
-      <a-box position="0 0.5 0" material="color: yellow;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-triangle>
-    </a-marker>
-    <a-marker type="pattern" url="/static/pattern-phot.patt") }} look-at="[camera]" id="anchorfive">
-      <a-icosahedron position="0 0.5 0" material="color: purple;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-ring>
-    </a-marker>
-    <a-marker type="pattern" url="/static/pattern-elev.patt") }} look-at="[camera]" id="anchorsix">
-      <a-tetrahedron position="0 0.5 0" material="color: red;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-tetrahedron>
-    </a-marker>
-    <a-marker type="pattern" url="/static/pattern-circ.patt") }} look-at="[camera]" id="anchorseven">
-      <a-cylinder position="0 0.5 0" material="color: blue;" animation="property: rotation; to: 360 360 0; loop: true; dur: 3000; easing: linear;"></a-box>
-    </a-marker>
-  </a-entity>
-</a-scene>
+<body>
+  <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    <a-entity mindar-image-target="targetIndex: 0">
+      <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+  </a-scene>
 </body>
 </html>
