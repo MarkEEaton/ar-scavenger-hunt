@@ -1,5 +1,3 @@
-#arjsDebugUIContainer { display: none; }
-body { display: flex; justify-content: center; align-items: center; }
 #starter { background-color: #ccc; border-radius: 5px; padding: 30px; font-size: 1.5em; text-align: center; }
 @media screen and (orientation: portrait) {
   #starter { font-size: 1.5em; }

@@ -6,11 +6,11 @@
 
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
-		<script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+		<script src="/static/main.js"></script>
   </head>
   <body>
-    <a-scene markerhandler mindar-image="imageTargetSrc:./targets.mind;" vr-mode-ui="enabled:false" device-orientation-permission-ui="enabled:false">
+    <a-scene markerhandler mindar-image="imageTargetSrc:/static/targets.mind;" vr-mode-ui="enabled:false" device-orientation-permission-ui="enabled:false">
       <div id="header-container" style="position: fixed;">
         <div id="header">
           <div class="dropdown">
