@@ -18,6 +18,7 @@ AFRAME.registerComponent('markerhandler', {
   },
   check: function (markers) {
      if (Object.is(JSON.stringify(markers), JSON.stringify({ reference: true })) == true) {
+       document.getElementById("starter").style.display = "none";
        document.getElementById("ender").style.display = "block";
        document.getElementsByClassName("dropdown-menu")[0].classList.remove("show");
     }
