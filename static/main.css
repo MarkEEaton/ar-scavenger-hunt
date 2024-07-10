@@ -27,6 +27,7 @@
   z-index: 45;
   width: 100%;
   padding: 20px;
+  position: fixed;
 }
 #header {
   padding: 5px;
