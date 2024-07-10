@@ -14,7 +14,56 @@ AFRAME.registerComponent("markerhandler", {
       .querySelector("#anchorzero")
       .addEventListener("targetFound", () => {
         this.markers.reference = true;
-        document.querySelector("#goalzero").innerHTML = "Reference Desk ✔";
+        document.querySelector("#goalzero").innerHTML = "Circulation Desk ✔";
+        this.check(this.markers);
+      });
+    document
+      .querySelector("#anchorone")
+      .addEventListener("targetFound", () => {
+        this.markers.reference = true;
+        document.querySelector("#goalone").innerHTML = "Elevators ✔";
+        this.check(this.markers);
+      });
+    document
+      .querySelector("#anchortwo")
+      .addEventListener("targetFound", () => {
+        this.markers.reference = true;
+        document.querySelector("#goaltwo").innerHTML = "Leisure Collection ✔";
+        this.check(this.markers);
+      });
+    document
+      .querySelector("#anchorthree")
+      .addEventListener("targetFound", () => {
+        this.markers.reference = true;
+        document.querySelector("#goalthree").innerHTML = "Photocopier ✔";
+        this.check(this.markers);
+      });
+    document
+      .querySelector("#anchorfour")
+      .addEventListener("targetFound", () => {
+        this.markers.reference = true;
+        document.querySelector("#goalfour").innerHTML = "Printer ✔";
+        this.check(this.markers);
+      });
+    document
+      .querySelector("#anchorfive")
+      .addEventListener("targetFound", () => {
+        this.markers.reference = true;
+        document.querySelector("#goalfive").innerHTML = "Reference Collection ✔";
+        this.check(this.markers);
+      });
+    document
+      .querySelector("#anchorsix")
+      .addEventListener("targetFound", () => {
+        this.markers.reference = true;
+        document.querySelector("#goalsix").innerHTML = "Reference Desk ✔";
+        this.check(this.markers);
+      });
+    document
+      .querySelector("#anchorseven")
+      .addEventListener("targetFound", () => {
+        this.markers.reference = true;
+        document.querySelector("#goalseven").innerHTML = "Study Rooms ✔";
         this.check(this.markers);
       });
   },
