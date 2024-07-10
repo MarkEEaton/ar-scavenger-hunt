@@ -4,6 +4,7 @@
   padding: 30px;
   font-size: 1.5em;
   text-align: center;
+  z-index: 30;
 }
 @media screen and (orientation: portrait) {
   #starter {

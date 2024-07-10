@@ -3278,8 +3278,9 @@ TextLayout.prototype.computeMetrics = function(text, start, end, width) {
   }
 }
 
-// this section replaced, as per:
+// this section replaced, so as not to violate CSP:
 // https://github.com/Experience-Monks/layout-bmfont-text/pull/10/files
+
 Object.defineProperty(TextLayout.prototype, 'width', {
   get: function() { return this._width },
   configurable: true
@@ -5574,7 +5575,7 @@ module.exports = anime;
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
 	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.THREE = {}));
-}(this, (function (exports) {
+}(this, (function (exports) {   // removed `'use strict';` here
 
 	// Polyfills
 	if (Number.EPSILON === undefined) {
